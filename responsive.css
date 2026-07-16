@@ -1,0 +1,75 @@
+/* ============================================================
+   Midnight YouTube V10 — responsive.css
+   ============================================================ */
+
+@media (min-width: 1600px) { .results-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); } }
+@media (max-width: 1440px) { .results-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); } }
+@media (max-width: 1200px) { :root { --sidebar-w: 260px; } .content { padding: 20px; } .kbd-hints { display: none; } }
+@media (max-width: 1024px) {
+    :root { --sidebar-w: 240px; }
+    .content { padding: 16px; }
+    .results-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+}
+
+/* ── Tablet ── */
+@media (max-width: 768px) {
+    body { overflow: auto; }
+    #app { flex-direction: column; }
+
+    .sidebar {
+        position: sticky; top: 0; width: 100%; height: auto;
+        border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 12px 14px; flex-direction: row; align-items: center;
+        flex-wrap: wrap; gap: 10px; z-index: 100;
+    }
+    .logo { flex-shrink: 0; padding: 8px 12px; border-bottom: none; }
+    .logo-text { display: none; }
+    .rotating-text-box, .lang-switch-box { display: none; }
+    .nav-tabs {
+        flex-direction: row; overflow-x: auto; gap: 4px; flex: 1; padding: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .tab { min-width: max-content; padding: 10px 12px; font-size: 13px; }
+    .tab .tab-label { display: none; }
+    .tab .icon { margin-right: 0; }
+
+    .tab-content { padding: 16px; }
+    .search-bar { width: 100%; }
+    .search-btn { min-height: 44px; min-width: 44px; }
+    .results-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .sort-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+    .pip-window {
+        width: 92% !important; left: 4% !important; height: auto !important;
+        aspect-ratio: 16 / 10; bottom: 10px; top: auto !important;
+    }
+    .pip-controls { gap: 2px; }
+    .pip-custom-btn { width: 32px; height: 32px; }
+    .pip-vol-wrap { display: none; }
+
+    .debug-panel { width: calc(100% - 20px); right: 10px; bottom: 10px; }
+    .settings-panel { max-width: 100%; }
+    .channel-hero { flex-direction: column; text-align: center; }
+
+    /* タッチ操作 */
+    .overlay-btn, .pill, .sort-btn { min-height: 40px; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+    .results-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .card-info { padding: 8px; }
+    .card-title { font-size: 12px; }
+    .tab-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .queue-item { padding: 8px; }
+    .queue-thumb { width: 64px; }
+}
+
+@media (max-width: 360px) { .results-grid { grid-template-columns: 1fr; } }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    #waveCanvas, #particleCanvas { display: none !important; }
+    .rotating-text { animation: none !important; }
+}

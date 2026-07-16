@@ -1,0 +1,129 @@
+/* ==========================  MIDNIGHT (Default) ========================== */
+body.theme-midnight { --bg:#07070b; --panel:#101018; --panel2:#181825; --panel3:#1e1e2e; --accent:#7c5cff; --accent2:#9d8aff; --text:#f5f5f5; --muted:#9ca0b3; }
+
+/* ==========================  OLED ========================== */
+body.theme-oled { --bg:#000; --panel:#050505; --panel2:#0f0f0f; --panel3:#141414; --accent:#fff; --accent2:#ccc; --text:#fff; --muted:#888; }
+
+/* ==========================  CYBER ========================== */
+body.theme-cyber { --bg:#060b11; --panel:#0d1520; --panel2:#172435; --panel3:#1a2d40; --accent:#00f0ff; --accent2:#66f7ff; --text:#e8ffff; --muted:#8fb7c2; }
+body.theme-cyber .logo-text { text-shadow:0 0 12px var(--accent); }
+body.theme-cyber .search-bar input:focus { box-shadow:0 0 0 2px var(--accent), 0 0 20px rgba(0,240,255,.2); }
+
+/* ==========================  NEON ========================== */
+body.theme-neon { --bg:#09050d; --panel:#12081a; --panel2:#1d0f2a; --panel3:#240f35; --accent:#ff00d4; --accent2:#ff77e7; --text:#fff; --muted:#c89ac9; }
+body.theme-neon .tab.active { box-shadow:0 0 16px var(--accent), 0 0 30px var(--accent); }
+body.theme-neon .pip-window { box-shadow:0 0 30px var(--accent), 0 20px 60px rgba(0,0,0,.8); }
+
+/* ==========================  GLASS ========================== */
+body.theme-glass { --bg:#0a1018; --panel:rgba(255,255,255,0.07); --panel2:rgba(255,255,255,0.11); --panel3:rgba(255,255,255,0.05); --accent:#5ba7ff; --accent2:#9ac8ff; --text:#fff; --muted:#b0c3d6; }
+body.theme-glass .sidebar, body.theme-glass .video-card, body.theme-glass .pip-window {
+    backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+    background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.14);
+}
+body.theme-glass body { background:#0a1018 !important; }
+
+/* ==========================  AURORA ========================== */
+body.theme-aurora { --bg:#050d12; --panel:#0a1a20; --panel2:#102430; --panel3:#163040; --accent:#00e5a0; --accent2:#66f0c8; --text:#e8fff6; --muted:#7fbfa0; }
+body.theme-aurora .logo-text { text-shadow:0 0 20px rgba(0,229,160,.5); }
+body.theme-aurora .sidebar { border-right-color:rgba(0,229,160,.15); }
+
+/* ==========================  ROSE ========================== */
+body.theme-rose { --bg:#0f070a; --panel:#1a0d12; --panel2:#26141c; --panel3:#301822; --accent:#ff5f8f; --accent2:#ff9ab8; --text:#fff0f4; --muted:#c0849a; }
+body.theme-rose .tab.active { box-shadow:0 0 14px rgba(255,95,143,.4); }
+
+/* ==========================  RAINBOW ========================== */
+body.theme-rainbow { --bg:#07070b; --panel:#101018; --panel2:#181825; --panel3:#1e1e2e; --text:#fff; --muted:#aaa; }
+
+/* Shared glow */
+body.theme-midnight .tab.active,
+body.theme-cyber    .tab.active,
+body.theme-aurora   .tab.active,
+body.theme-rose     .tab.active {
+    box-shadow:0 0 10px var(--accent), 0 0 20px rgba(255,255,255,.1);
+}
+
+/* ==========================  YELLOW ========================== */
+body.theme-yellow { 
+    --bg: #0c0b05;       /* 極めて深い黒に近い黄色 */
+    --panel: #16150a;    /* 暗いトーンのパネル */
+    --panel2: #222010;   /* 中間のパネル */
+    --panel3: #2e2b16;   /* 明るめのパネル */
+    --accent: #ffd700;   /* 鮮やかなゴールド・イエロー */
+    --accent2: #ffe566;  /* 明るい黄色 */
+    --text: #fffdf0;     /* 少し黄色みがかった白 */
+    --muted: #a6a080;    /* くすんだ黄色（テキスト弱） */
+}
+body.theme-yellow .logo-text { text-shadow: 0 0 12px rgba(255,215,0,0.4); }
+
+/* ==========================  LUNAR ========================== */
+body.theme-lunar { 
+    --bg: #0b0c10;       /* 宇宙の深淵をイメージした黒 */
+    --panel: #141720;    /* 月夜の影のようなディープブルーグレー */
+    --panel2: #1f2330;   
+    --panel3: #2a2f40;   
+    --accent: #90a4ae;   /* 月光をイメージした神秘的なシルバーグレー */
+    --accent2: #cfd8dc;  /* 明るい月光の白 */
+    --text: #eceff1;     
+    --muted: #607d8b;    
+}
+
+body.theme-hbl{
+    --bg:#0099ff;
+    --panel:#0d2a57;
+    --panel2:#16376d;
+    --panel3:#1e4787;
+
+    --accent:#ffffff;
+    --accent2:#7ed8ff;
+
+    --text:#ffffff;
+    --muted:#b9d4ff;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #29b4ff 0%,
+            #0f7de8 35%,
+            #0055cc 100%
+        );
+}
+
+body.theme-hbl::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.08) 1px,
+            transparent 1px
+        );
+
+    background-size:32px 32px;
+
+    pointer-events:none;
+    opacity:.35;
+}
+
+body.theme-hbl .tab.active{
+    border:2px solid #fff !important;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,.4),
+        inset 0 0 10px rgba(255,255,255,.25);
+
+    background:rgba(255,255,255,.12);
+}
+
+body.theme-hbl .logo-text{
+    color:#fff;
+
+    text-shadow:
+        0 2px 0 #000,
+        0 0 8px rgba(255,255,255,.6);
+}
