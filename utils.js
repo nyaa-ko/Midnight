@@ -10,7 +10,7 @@
 
 "use strict";
 
-const WORKER_URL = "https://silent-mouse-5878.78q38gs6.workers.dev/";
+const WORKER_URL = "https://silent-mouse-5878.neko-nya.workers.dev/";
 const APP_VERSION = "10.0";
 
 // ---------- Icon helper ----------
